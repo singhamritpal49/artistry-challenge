@@ -1,0 +1,13 @@
+<h1> Add New Artist to Instrument</h1>
+
+
+<%= form_for @studio do |f| %>
+<%= f.label :artist_id %>
+<%= f.collection_select :artist_id, @artists, :id, :name  %>
+
+<%= f.label :instrument_id %>
+<%= f.collection_select :instrument_id, @instruments, :id, :name %>
+
+<%= f.submit %>
+
+<% end %>
